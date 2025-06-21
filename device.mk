@@ -54,9 +54,6 @@ PRODUCT_PACKAGES_DEBUG += \
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_RETROFIT_DYNAMIC_PARTITIONS := true
 
-PRODUCT_COPY_FILES += \
-    device/xiaomi/jasmine_sprout/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom
-
 # Init
 PRODUCT_PACKAGES += \
     fstab.qcom \
