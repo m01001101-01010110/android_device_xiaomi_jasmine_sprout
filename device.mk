@@ -4,8 +4,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-AB_OTA_UPDATER := true
-
 # Inherit from wayne-common
 $(call inherit-product, device/xiaomi/wayne-common/wayne.mk)
 
@@ -18,6 +16,16 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
 # A/B
+AB_OTA_UPDATER := true
+
+AB_OTA_PARTITIONS +=
+    boot \
+    system \
+    vendor \
+    product \
+    system_ext \
+    odm
+
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
     POSTINSTALL_PATH_system=system/bin/otapreopt_script \
