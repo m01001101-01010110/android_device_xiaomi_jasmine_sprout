@@ -18,10 +18,13 @@ PRODUCT_SOONG_NAMESPACES += \
 # A/B
 AB_OTA_UPDATER := true
 
-AB_OTA_PARTITIONS +=
+AB_OTA_PARTITIONS += \
     boot \
     system \
-    vendor
+    vendor \
+    system_ext \
+    product \
+    odm
 
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
