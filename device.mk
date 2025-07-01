@@ -60,6 +60,7 @@ PRODUCT_RETROFIT_DYNAMIC_PARTITIONS := true
 # Init
 PRODUCT_PACKAGES += \
     fstab.qcom \
+    init.verity.rc
 
 # Update engine
 PRODUCT_PACKAGES += \
@@ -69,6 +70,11 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
+
+# Verity
+PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/bootdevice/by-name/system
+PRODUCT_VENDOR_VERITY_PARTITION := /dev/block/bootdevice/by-name/vendor
+$(call inherit-product, build/target/product/verity.mk)
 
 # Wifi
 PRODUCT_PACKAGES += \
