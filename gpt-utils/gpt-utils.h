@@ -81,7 +81,7 @@ extern "C" {
 #define PTN_XBL                         "xbl"
 #define PTN_SWAP_LIST                   PTN_XBL, \
         "abl", "cmnlib", "cmnlib64", "devcfg", "dsp", "hyp", "keymaster", \
-        "mdtp", "mdtpsecapp", "pmic", "rpm", "tz", "vbmeta"
+        "mdtp", "mdtpsecapp", "pmic", "rpm", "tz"
 #define AB_PTN_LIST PTN_SWAP_LIST, "boot", "system", "vendor", "modem", "bluetooth"
 #define BOOT_DEV_DIR    "/dev/block/bootdevice/by-name"
 
