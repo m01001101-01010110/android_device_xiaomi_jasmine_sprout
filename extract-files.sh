@@ -25,5 +25,6 @@ set -e
 export DEVICE=jasmine_sprout
 export DEVICE_SPECIFIED_COMMON=wayne-common
 export VENDOR=xiaomi
+export VENDOR_COMMON=${VENDOR}
 
-"./../../${VENDOR}/${DEVICE_SPECIFIED_COMMON}/extract-files.sh" "$@"
+"./../../${VENDOR_COMMON}/${DEVICE_SPECIFIED_COMMON}/extract-files.sh" "$@"
