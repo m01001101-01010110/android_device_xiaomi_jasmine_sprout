@@ -49,6 +49,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
 
+# Shipping API
+PRODUCT_SHIPPING_API_LEVEL := 27
+
 # Wifi
 PRODUCT_PACKAGES += \
     JasmineWifiOverlay
